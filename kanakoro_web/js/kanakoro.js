@@ -11,7 +11,30 @@ gifImage4.src = "img/ro_d.gif?" + (new Date).getTime();
 window.onload = function(){
 	$(function() {
 		$("#loading").delay(2000).fadeOut();
-		$("#container").delay(2000).fadeIn();
-		$("#sec01").delay(1000000).hide(1000000);
+		$("#sec01").delay(2000).fadeIn();
+		$("#sec01").delay(10000).fadeOut();
+		$("#sec02").delay(10000).fadeIn("slow");
+		$("#sec02 img").mouseover(function(){
+			if ($(this).attr("src")){
+					var bf_src = $(this);
+					setTimeout(function(){
+						if(srcがpngだったら){
+							var af_src = bf_src.attr("src").replace(".png", ".gif");
+						}else if(srcがgifだったら){
+							var af_src = bf_src.attr("src").replace("_b.gif", ".gif");
+						}
+						bf_src.attr("src",af_src);
+					},0);
+			}
+		});
+		$("#sec02 img").mouseout(function(){
+			if ($(this).attr("src")){
+				var bf_src = $(this);
+				setTimeout(function(){
+					var af_src = bf_src.attr("src").replace(".gif", "_b.gif");
+					bf_src.attr("src",af_src);
+					},1400);
+			}
+		})
 	});
 }

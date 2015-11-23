@@ -10,55 +10,46 @@ body {
 	width:100%;
 	height: 100%;
 }
-#sec01{
-	height: 100%;
-	display: table;
-	max-width: 70%;
-	margin: 0 auto;
-	overflow: hidden;
-}
 .title{
 	float: left;
 	width: 25%;
-/*	-webkit-animation-name: 'anime';
-	-webkit-animation-duration: 5s;
-	-webkit-animation-timing-function: ease;
-	-webkit-animation-iteration-count: 1;
-	-webkit-animation-direction:normal;*/
 }
 .title img{
 	width:80%;
 	position: relative;
 	left: 10%;
 }
-
-.table{
+.table2 img{
+	width: 90%;
 	position: relative;
-	top: -3%;
-	display: table-cell;
-	vertical-align: middle;
+	left: 5%;
 }
-/*@-webkit-keyframes 'anime'{
-	0%{opacity: 0;}
-	50%{opacity: 1;}
-	100%{opacity: 0;}*/
-}
-#size{
-	width: 100px;
-	height: 100px;
-	background-color: #3300FF;
-}
-
 #container{
-	display:none;
+	position: relative;
 	height: 100%;
+	max-width: 75%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+#sec01{
+	display: none;
+	width: 100%;
+	position: absolute;
+	top: 48%;
+	left: 50%;
+	transform: translate(-50%,-50%);
 }
 #loading{
-	position:absolute;
+	position:relative;
 	left:50%;
 	top:40%;
 	margin-left:-30px;
 }
 #sec02{
-	
+	width: 100%;
+	display: none;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
 }
